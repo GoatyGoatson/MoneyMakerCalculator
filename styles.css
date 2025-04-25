@@ -1,8 +1,10 @@
 :root {
- --bg-color: #faf9f6;
- --header-bg: #ececec;
- --border-color: #ccc;
- --text-color: #333;
+ --bg-color: #f4f4f9;
+ --text-color: #2e2e2e;
+ --header-bg: #e2e2e8;
+ --table-bg: #ffffff;
+ --cell-bg: #fefefe;
+ --border-color: #d0d0d8;
  --row-height: 3rem;
 }
 
@@ -17,22 +19,65 @@ body {
 }
 
 body.dark-mode {
- --bg-color: #2b2b2b;
- --header-bg: #444;
- --border-color: #555;
- --text-color: #eee;
+ --bg-color: #1e1e2a;
+ --text-color: #e0e0e8;
+ --header-bg: #2a2a3e;
+ --table-bg: #242434;
+ --cell-bg: #2e2e4a;
+ --border-color: #3b3b50;
 }
 
 .container {
- position: relative;
  width: 100%;
  max-width: 800px;
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+ padding: 1rem;
+ background: var(--table-bg);
+ border-radius: 8px;
+}
+
+h1 {
+ text-align: center;
+ margin-bottom: 1rem;
+}
+
+.top-bar {
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+ margin-bottom: 0.5rem;
+}
+
+.action-btn,
+.add-row-btn {
+ background: var(--cell-bg);
+ border: 1px solid var(--border-color);
+ border-radius: 4px;
+ padding: 0.5rem 1rem;
+ cursor: pointer;
+ font-size: 0.9rem;
+ color: var(--text-color);
+ transition: background 0.2s;
+}
+
+.action-btn:hover,
+.add-row-btn:hover {
+ background: var(--header-bg);
+}
+
+.settings-btn {
+ margin-left: auto;
+ background: none;
+ border: none;
+ font-size: 1.25rem;
+ color: var(--text-color);
+ cursor: pointer;
 }
 
 table {
  width: 100%;
  border-collapse: collapse;
- background: #fff;
+ background: var(--table-bg);
 }
 
 th,
@@ -41,6 +86,7 @@ td {
  padding: 0.5rem;
  text-align: right;
  height: var(--row-height);
+ background: var(--cell-bg);
 }
 
 th {
@@ -49,40 +95,5 @@ th {
 }
 
 td[contenteditable="true"] {
- background: #fffaf0;
-}
-
-.top-bar {
- display: flex;
- gap: 0.5rem;
- margin-bottom: 0.5rem;
-}
-
-.action-btn {
- background: #fff;
- border: 1px solid var(--border-color);
- border-radius: 4px;
- padding: 0.5rem 1rem;
- cursor: pointer;
- font-size: 0.9rem;
-}
-
-.add-row-btn {
- display: inline-flex;
- align-items: center;
- background: #fff;
- border: 1px solid var(--border-color);
- border-radius: 4px;
- padding: 0.5rem 1rem;
- font-size: 1rem;
- cursor: pointer;
- margin-bottom: 0.5rem;
-}
-
-.settings-btn {
- margin-left: auto;
- background: none;
- border: none;
- font-size: 1.25rem;
- cursor: pointer;
+ outline: none;
 }
