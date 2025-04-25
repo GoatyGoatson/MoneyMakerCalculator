@@ -2,12 +2,19 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Level Tabelle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level & Kosten Tabelle</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
     <h1>Level &amp; Kosten Tabelle</h1>
+    <div class="top-bar">
+      <button id="uploadBtn" class="action-btn">📂 Tabelle hochladen</button>
+      <button id="saveBtn" class="action-btn">💾 Tabelle speichern</button>
+      <button id="settingsBtn" class="settings-btn">⚙️</button>
+      <input type="file" id="fileInput" accept=".csv" style="display:none">
+    </div>
     <button id="addRowBtn" class="add-row-btn">＋ Zeile hinzufügen</button>
     <table id="dataTable">
       <thead>
@@ -34,7 +41,6 @@
       </tbody>
     </table>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
