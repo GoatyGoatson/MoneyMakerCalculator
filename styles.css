@@ -1,0 +1,64 @@
+:root {
+ --bg-color: #faf9f6;
+ --header-bg: #ececec;
+ --border-color: #ccc;
+ --primary-font: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+ margin: 0;
+ padding: 2rem;
+ background: var(--bg-color);
+ font-family: var(--primary-font);
+ display: flex;
+ justify-content: center;
+}
+
+.container {
+ width: 100%;
+ max-width: 800px;
+}
+
+h1 {
+ text-align: center;
+ margin-bottom: 1rem;
+}
+
+.add-row-btn {
+ display: inline-flex;
+ align-items: center;
+ background: #fff;
+ border: 1px solid var(--border-color);
+ border-radius: 4px;
+ padding: 0.5rem 1rem;
+ font-size: 1rem;
+ cursor: pointer;
+ margin-bottom: 0.5rem;
+ transition: background 0.2s;
+}
+
+.add-row-btn:hover {
+ background: #f0f0f0;
+}
+
+table {
+ width: 100%;
+ border-collapse: collapse;
+ background: #fff;
+}
+
+th,
+td {
+ border: 1px solid var(--border-color);
+ padding: 0.75rem;
+ text-align: right;
+}
+
+th {
+ background: var(--header-bg);
+ text-align: center;
+}
+
+td[contenteditable="true"] {
+ background: #fffaf0;
+}
